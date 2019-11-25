@@ -141,7 +141,7 @@ print('---------------------Checking for NONE values---------------------')
 import pdb
 pdb.set_trace()
 # checking for NONE values
-print(temp.loc[temp.Class.isnull()])
+#print(temp[temp.Class.isnull()])
 
 # removing NONE values from temp
 temp = temp[temp.Class.notnull()]
