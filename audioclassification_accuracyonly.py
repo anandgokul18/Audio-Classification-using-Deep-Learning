@@ -138,14 +138,14 @@ print(temp_test.head())
 
 
 print('---------------------Checking for NONE values---------------------')
-import pdb
-pdb.set_trace()
 # checking for NONE values
 #print(temp[temp.Class.isnull()])
 
 # removing NONE values from temp
-temp = temp[temp.Class.notnull()]
-temp_test = temp_test[temp_test.notnull()]
+temp = temp.dropna()
+temp_test = temp_test.dropna()
+#temp = temp[temp.Class.notnull()]
+#temp_test = temp_test[temp_test.notnull()]
 #print(temp.ID[temp.label.isnull()])
 
 
@@ -218,5 +218,5 @@ def categorical_classifier():
 model.fit(x_train,y_train, batch_size=32, epochs=1, validation_data=(x_test, y_test))
 
 # evaluate the model
-scores = model.evaluate(X, Y, verbose=0)
+scores = model.evaluate(x_test, y_test verbose=0)
 print("%s: %.2f%%" % (model.metrics_names[1], scores[1]*100))
