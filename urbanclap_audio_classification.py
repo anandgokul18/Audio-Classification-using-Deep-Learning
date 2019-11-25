@@ -213,8 +213,4 @@ def categorical_classifier():
 
 
 # training the data
-model.fit(x_train,y_train, batch_size=32, epochs=1, validation_data=(x_test, y_test))
-
-# evaluate the model
-scores = model.evaluate(X, Y, verbose=0)
-print("%s: %.2f%%" % (model.metrics_names[1], scores[1]*100))
+model.fit(x_train,y_train, batch_size=32, epochs=650, validation_data=(x_test, y_test))

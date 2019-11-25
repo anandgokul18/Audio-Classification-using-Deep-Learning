@@ -15,7 +15,7 @@ from keras.utils.np_utils import to_categorical
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Activation
 from keras.optimizers import Adam
-from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split
 from sklearn import metrics
 
 
@@ -213,5 +213,8 @@ def categorical_classifier():
 
 
 # training the data
-model.fit(x_train,y_train, batch_size=32, epochs=650, validation_data=(x_test, y_test))
+model.fit(x_train,y_train, batch_size=32, epochs=1, validation_data=(x_test, y_test))
 
+# evaluate the model
+scores = model.evaluate(X, Y, verbose=0)
+print("%s: %.2f%%" % (model.metrics_names[1], scores[1]*100))
