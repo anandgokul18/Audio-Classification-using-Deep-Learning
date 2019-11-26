@@ -9,6 +9,10 @@ import pandas as pd
 
 df1 = pd.read_csv("/home/anandgokul18/audio/sounds/labels/train.csv")
 
+print(df1.head())
+import pdb
+pdb.set_trace()
+
 #target_ext = 'wav'                                  # File extension/type (used to filter input images)
 
 #_, _, file_names = next(os.walk(allfiles_dir))       # Get all image names
