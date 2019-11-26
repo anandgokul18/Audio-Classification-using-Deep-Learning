@@ -13,7 +13,7 @@ count=0
 for name in file_names:
     # Ignore hidden files and non matching file extensions (target_ext)
    if name[0] != '.' and name.split('.')[1] == target_ext:
-      if count==7 or count==8 or count==9:
+      if count==8 or count==9:
          shutil.move(os.path.join(allfiles_dir, name), os.path.join(target_dir, name))
    if count==9:
       count=0
