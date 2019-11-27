@@ -1,7 +1,7 @@
 Baseline:
 ---------
 
-Dataset Size: 100% ()
-Number of epochs: 1
-Test Accuracy: 
+Dataset Size: 100% (4349 images)
+Number of epochs: 200
+Test Accuracy: 90.15%
 
